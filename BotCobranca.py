@@ -3,16 +3,13 @@ import time
 import os
 import urllib.request
 
-from dotenv import load_dotenv
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
-load_dotenv()
 
-
-geourl = os.getenv('API')
+geourl = "https://sistema.wvetro.com.br/wvetro/rest/API/DPListLicencasVencidas"
 
 response = urllib.request.urlopen(geourl)
 content = response.read()
@@ -79,7 +76,7 @@ for i in data:
             mensagem = (f"Informamos que não identificamos o pagamento referente ao boleto do sistema com vencimento em: {dtven}\n\nAtualizamos e estamos encaminhando com vencimento para hoje: {dthoje}. Lembrando que 15 dias após o vencimento do título, caso o sistema não identifique o pagamento do boleto, seu sistema será bloqueado atá a regularização.\n\nSegue o boleto para realizar o pagamento:{licencaTLB}\n\nQualquer duvida estamos sempre a disposição.\n\nAtt.WVETRO")
             
         text = urllib.parse.quote(f"{mensagem}")
-        link = f"https://web.whatsapp.com/send?phone=+55{licencaWpp}&text={text}"
+        link = f"https://web.whatsapp.com/send?phone=+5515996159457&text={text}"
         driver.get(link)
         
         while len(driver.find_elements(By.ID, 'side')) < 1:
@@ -92,7 +89,7 @@ for i in data:
         
     if licencaTCC !="":
         pix = urllib.parse.quote(f"{chave_pix}")
-        linkpix = f"https://web.whatsapp.com/send?phone=+55{licencaWpp}&text={pix}"
+        linkpix = f"https://web.whatsapp.com/send?phone=+5515996159457&text={pix}"
         driver.get(linkpix)
         
         while len(driver.find_elements(By.ID, 'side')) < 1:
