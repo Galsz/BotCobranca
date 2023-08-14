@@ -1,0 +1,10 @@
+[12644:12192:0814/095428.289:WARNING:chrome_main_delegate.cc(594)] This is Chrome version 115.0.5790.171 (not a warning)
+[12644:12192:0814/095428.400:INFO:chrome_browser_cloud_management_controller.cc(167)] Starting CBCM Controller Initialization
+[12644:12192:0814/095428.400:INFO:chrome_browser_cloud_management_controller.cc(195)] No machine level policy manager exists.
+[12644:12192:0814/095438.701:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[12644:12192:0814/095439.539:INFO:CONSOLE(7)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (7)
+[12644:12192:0814/095502.826:WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:265059
+[12644:12192:0814/095504.184:WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:5082
+[12644:12192:0814/095504.768:WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:45113
+[12644:12192:0814/095513.258:WARNING:controller_impl.cc(1188)] Background download complete, client: 6, completion type: 0, file size:30388142
+[12644:12192:0814/100006.769:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

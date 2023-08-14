@@ -2,16 +2,17 @@ import json
 import time
 import os
 import urllib.request
+import ssl
 
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 
+context = ssl._create_unverified_context()
+geourl = "https://sistema.wvetro.com.br/wvetro/rest/API/DPListLicencasVencidas" 
 
-geourl = "https://sistema.wvetro.com.br/wvetro/rest/API/DPListLicencasVencidas"
-
-response = urllib.request.urlopen(geourl)
+response = urllib.request.urlopen(geourl, context=context)
 content = response.read()
 data = json.loads(content.decode("utf-8"))
 
