@@ -1,2 +1,3 @@
-2023/08/14-09:54:28.437 1bac Creating DB C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\Sync Data\LevelDB since it was missing.
-2023/08/14-09:54:28.453 1bac Reusing MANIFEST C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\Sync Data\LevelDB/MANIFEST-000001
+2023/08/18-08:56:01.877 bbc Reusing MANIFEST C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\Sync Data\LevelDB/MANIFEST-000001
+2023/08/18-08:56:01.877 bbc Recovering log #3
+2023/08/18-08:56:01.878 bbc Reusing old log C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\Sync Data\LevelDB/000003.log 

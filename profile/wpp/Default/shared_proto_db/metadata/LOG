@@ -1,2 +1,3 @@
-2023/08/14-09:54:28.632 1924 Creating DB C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\shared_proto_db\metadata since it was missing.
-2023/08/14-09:54:28.640 1924 Reusing MANIFEST C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\shared_proto_db\metadata/MANIFEST-000001
+2023/08/18-08:56:02.044 1420 Reusing MANIFEST C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\shared_proto_db\metadata/MANIFEST-000001
+2023/08/18-08:56:02.045 1420 Recovering log #3
+2023/08/18-08:56:02.046 1420 Reusing old log C:\Users\Osmir\Desktop\BotCobranca\profile\wpp\Default\shared_proto_db\metadata/000003.log 
