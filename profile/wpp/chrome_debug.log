@@ -1,7 +1,0 @@
-[15432:5388:0818/085601.706:WARNING:chrome_main_delegate.cc(594)] This is Chrome version 115.0.5790.173 (not a warning)
-[15432:5388:0818/085601.838:INFO:chrome_browser_cloud_management_controller.cc(167)] Starting CBCM Controller Initialization
-[15432:5388:0818/085601.838:INFO:chrome_browser_cloud_management_controller.cc(195)] No machine level policy manager exists.
-[15432:5388:0818/085612.368:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[15432:5388:0818/085612.736:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (21)
-[15432:5388:0818/085612.736:INFO:CONSOLE(21)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (21)
-[15432:5388:0818/085612.740:INFO:CONSOLE(7)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/vendor1~app.7f14216f970118f62a35.js (7)

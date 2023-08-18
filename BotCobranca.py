@@ -4,10 +4,14 @@ import os
 import urllib.request
 import ssl
 
+
 from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium import webdriver
+
 
 context = ssl._create_unverified_context()
 geourl = "https://sistema.wvetro.com.br/wvetro/rest/API/DPListLicencasVencidas" 
@@ -19,13 +23,14 @@ data = json.loads(content.decode("utf-8"))
 
 if __name__ == '__main__':
     
-    service = Service()
+    service = Service(ChromeDriverManager().install())
     dir_path = os.getcwd()
     profile = os.path.join(dir_path, "profile", "wpp")
     options = webdriver.ChromeOptions()
+ 
     options.add_argument(r"user-data-dir={}".format(profile))
     
-    
+
     driver = webdriver.Chrome(service=service, options=options) 
     driver.minimize_window()
     time.sleep(3)
