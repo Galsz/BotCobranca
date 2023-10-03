@@ -6,7 +6,6 @@ import ssl
 
 
 from datetime import datetime
-from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -23,7 +22,7 @@ data = json.loads(content.decode("utf-8"))
 
 if __name__ == '__main__':
     
-    service = Service(ChromeDriverManager().install())
+    service = Service(executable_path=ChromeDriverManager().install())
     dir_path = os.getcwd()
     profile = os.path.join(dir_path, "profile", "wpp")
     options = webdriver.ChromeOptions()
@@ -36,12 +35,9 @@ if __name__ == '__main__':
     time.sleep(3)
     driver.get("https://web.whatsapp.com")
     
-    
-    
-    while len((driver.find_elements(By.ID, 'side'))) < 1:
-        time.sleep(1)
-    time.sleep(2)
-
+    while len(driver.find_elements(By.ID, 'side')) < 1:
+        time.sleep(2)
+    time.sleep(4)
 
 for i in data:
 
@@ -86,24 +82,23 @@ for i in data:
         driver.get(link)
         
         while len(driver.find_elements(By.ID, 'side')) < 1:
-            time.sleep(1)
-        time.sleep(2)
+            time.sleep(2)
+        time.sleep(4)
 
         if len(driver.find_elements(By.XPATH, '//*[@id="app"]/div/span[2]/div/span/div/div/div/div/div/div[1]')) < 1:
             driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span').click()
-            time.sleep(4)
-        
+        time.sleep(4)
+
     if licencaTCC !="":
         pix = urllib.parse.quote(f"{chave_pix}")
         linkpix = f"https://web.whatsapp.com/send?phone=+55{licencaWpp}&text={pix}"
         driver.get(linkpix)
         
         while len(driver.find_elements(By.ID, 'side')) < 1:
-            time.sleep(1)
-        time.sleep(2)
+            time.sleep(2)
+        time.sleep(4)
 
         if len(driver.find_elements(By.XPATH, '//*[@id="app"]/div/span[2]/div/span/div/div/div/div/div/div[1]')) < 1:
             driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span').click()
-            time.sleep(4)
-
+        time.sleep(4)
  
