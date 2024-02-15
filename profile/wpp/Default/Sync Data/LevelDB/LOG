@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2024/02/15-12:21:14.760 22b8 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\Sync Data\LevelDB/MANIFEST-000001
 2024/02/15-12:21:14.764 22b8 Recovering log #3
 2024/02/15-12:21:14.765 22b8 Reusing old log C:\Projects\BotCobranca\profile\wpp\Default\Sync Data\LevelDB/000003.log 
+=======
+2024/01/19-12:47:18.841 1358 Reusing MANIFEST C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Sync Data\LevelDB/MANIFEST-000001
+2024/01/19-12:47:18.847 1358 Recovering log #3
+2024/01/19-12:47:18.848 1358 Reusing old log C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Sync Data\LevelDB/000003.log 
+>>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864

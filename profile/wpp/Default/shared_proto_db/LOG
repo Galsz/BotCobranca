@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2024/02/15-12:21:14.997 37d4 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\shared_proto_db/MANIFEST-000001
 2024/02/15-12:21:14.998 37d4 Recovering log #3
 2024/02/15-12:21:15.001 37d4 Reusing old log C:\Projects\BotCobranca\profile\wpp\Default\shared_proto_db/000003.log 
+=======
+2024/01/19-12:47:19.050 f0c Reusing MANIFEST C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\shared_proto_db/MANIFEST-000001
+2024/01/19-12:47:19.050 f0c Recovering log #3
+2024/01/19-12:47:19.054 f0c Reusing old log C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\shared_proto_db/000003.log 
+>>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864

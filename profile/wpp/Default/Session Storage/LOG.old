@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2024/02/15-12:20:32.888 2100 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\Session Storage/MANIFEST-000001
 2024/02/15-12:20:32.893 2100 Recovering log #3
 2024/02/15-12:20:32.904 2100 Reusing old log C:\Projects\BotCobranca\profile\wpp\Default\Session Storage/000003.log 
+=======
+2024/01/19-11:51:45.647 27ac Reusing MANIFEST C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Session Storage/MANIFEST-000001
+2024/01/19-11:51:45.650 27ac Recovering log #3
+2024/01/19-11:51:45.658 27ac Reusing old log C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Session Storage/000003.log 
+>>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864

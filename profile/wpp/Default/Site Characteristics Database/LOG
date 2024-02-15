@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 2024/02/15-12:21:14.773 3974 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\Site Characteristics Database/MANIFEST-000001
 2024/02/15-12:21:14.774 3974 Recovering log #3
 2024/02/15-12:21:14.774 3974 Reusing old log C:\Projects\BotCobranca\profile\wpp\Default\Site Characteristics Database/000003.log 
+=======
+2024/01/19-12:47:18.856 d88 Reusing MANIFEST C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Site Characteristics Database/MANIFEST-000001
+2024/01/19-12:47:18.863 d88 Recovering log #3
+2024/01/19-12:47:18.863 d88 Reusing old log C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Site Characteristics Database/000003.log 
+>>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864
