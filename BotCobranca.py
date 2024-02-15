@@ -1,3 +1,9 @@
+# --------------------------------------------------------------------------------------------------------
+# Created By   : Geovane A L Silva
+# Created Date : 2023/09/03
+# version = 1.4 - 2024/02/15
+# --------------------------------------------------------------------------------------------------------
+
 import json
 import time
 import os
@@ -8,19 +14,24 @@ import ssl
 from datetime import datetime
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
+from selenium.common.exceptions import UnexpectedAlertPresentException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 
 
-context = ssl._create_unverified_context()
-geourl = "https://sistema.wvetro.com.br/wvetro/rest/API/DPListLicencasVencidas" 
+#fetches license data through an API
+def get_data_license():
 
-response = urllib.request.urlopen(geourl, context=context)
-content = response.read()
-data = json.loads(content.decode("utf-8"))
+    context = ssl._create_unverified_context()
+    geourl = os.environ.get('API_URL')
+
+    response = urllib.request.urlopen(geourl, context=context)
+    content = response.read()
+    return json.loads(content.decode("utf-8"))
 
 
-if __name__ == '__main__':
+#initialize drivers and configure services
+def initialize_driver():
     
     service = Service(executable_path=ChromeDriverManager().install())
     dir_path = os.getcwd()
@@ -28,77 +39,94 @@ if __name__ == '__main__':
     options = webdriver.ChromeOptions()
  
     options.add_argument(r"user-data-dir={}".format(profile))
-    
 
     driver = webdriver.Chrome(service=service, options=options) 
     driver.minimize_window()
-    time.sleep(3)
-    driver.get("https://web.whatsapp.com")
-    
+
+    return driver
+
+
+#send text messages to license number
+def send_message(driver, number, message):
+    text = urllib.parse.quote(f"{message}")
+    link = f"https://web.whatsapp.com/send?phone=+55{number}&text={text}"
+    driver.get(link)
+
     while len(driver.find_elements(By.ID, 'side')) < 1:
         time.sleep(2)
     time.sleep(4)
 
-for i in data:
+    if len(driver.find_elements(By.XPATH, '//*[@id="app"]/div/span[2]/div/span/div/div/div/div/div/div[1]')) < 1:
+        driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span').click()
+    time.sleep(4)
 
-    licencaId = i['LicencaId']
-    licencaNome = i['LicencaNome']
-    licencaR = i['LicencaRespFinanceiro']
-    licencaTDV = i['LicencaTitulosDtVencimento']
-    licencaTVlr = i['LicencaTitulosVlr']
-    licencaWpp = i['LicencaWhatsApp']
-    licencaTLB = i['LicencaTitulosLinkBoleto']
-    licencaTQR = i['LicencaTitulosQRCodeURL']
-    licencaTCC = i['LicencaTitulosCopiaCola']
-    
-    
-    dtstring = (f'{licencaTDV}')
-    dt = dtstring.replace('-', '/')
-    dtformat = datetime.strptime(dt, "%Y/%m/%d")
-    dtven = datetime.strftime(dtformat, "%d/%m/%Y")
-    
-    dtnow = datetime.now()
-    dtdate = dtnow.date()
-    dtstr = (f"{dtdate}")
-    dthj = dtstr.replace('-', '/')
-    dthjformat = datetime.strptime(dthj, "%Y/%m/%d")
-    dthoje = datetime.strftime(dtdate, "%d/%m/%Y")
-    
-    
-    
-    
-    if licencaWpp != "":
-        if licencaTCC !="":
+
+def main():
+    try:
+
+        data = get_data_license()
+        driver = initialize_driver()
+
+        for i in data:
+
+            #********uncomment for use*********
+            # licenseId = i['LicencaId']
+            # licenseName = i['LicencaNome']
+            # licenseR = i['LicencaRespFinanceiro']
+            # licenseTQR = i['LicencaTitulosQRCodeURL']
+            # licenseTVlr = i['LicencaTitulosVlr']
+             
+            licenseWpp = i['LicencaWhatsApp']
+            licenseTLB = i['LicencaTitulosLinkBoleto']
+            licenseTCC = i['LicencaTitulosCopiaCola']
+            licenseTDV = i['LicencaTitulosDtVencimento']
             
-            mensagem = (f"*WVETRO INFORMA:*\n\nNão identificamos o pagamento referente ao boleto do sistema com vencimento em: {dtven}\n\nAtualizamos e estamos encaminhando com vencimento para hoje: {dthoje}. Lembrando que 15 dias após o vencimento do título, caso o sistema não identifique o pagamento do boleto, seu sistema será bloqueado até a regularização.\n\nQualquer dúvida, estamos sempre a disposição.\n\nSeguem abaixo duas formas para pagamento:\n\nLink do boleto pix: {licencaTLB}\n\nPix copia e cola:" )
-            
-            chave_pix = (f"{licencaTCC}")
-            
-        else:
-            mensagem = (f"Informamos que não identificamos o pagamento referente ao boleto do sistema com vencimento em: {dtven}\n\nAtualizamos e estamos encaminhando com vencimento para hoje: {dthoje}. Lembrando que 15 dias após o vencimento do título, caso o sistema não identifique o pagamento do boleto, seu sistema será bloqueado atá a regularização.\n\nSegue o boleto para realizar o pagamento:{licencaTLB}\n\nQualquer duvida estamos sempre a disposição.\n\nAtt.WVETRO")
-            
-        text = urllib.parse.quote(f"{mensagem}")
-        link = f"https://web.whatsapp.com/send?phone=+55{licencaWpp}&text={text}"
-        driver.get(link)
+            dtformat = datetime.strptime(licenseTDV, '%Y-%m-%d')
+            dtven = dtformat.strftime("%d/%m/%Y")
         
-        while len(driver.find_elements(By.ID, 'side')) < 1:
-            time.sleep(2)
+            today = datetime.now().strftime("%d/%m/%Y")
+            
+            if licenseWpp != "":
+
+                base_message = (
+                        f"*WVETRO INFORMA:*\n\nNão identificamos o pagamento referente ao boleto do sistema "
+                        f"com vencimento em: {dtven}\n\nAtualizamos e estamos encaminhando com vencimento "
+                        f"para hoje: {today}. Lembrando que 15 dias após o vencimento do título, caso o "
+                        f"sistema não identifique o pagamento do boleto, seu sistema será bloqueado até a regularização."
+                        f"\n\nQualquer dúvida, estamos sempre à disposição."
+                    )
+                
+                messages = []
+
+                if licenseTCC !="":
+                    
+                    message = (f"{base_message}\n\nSeguem abaixo duas formas para pagamento:\n\nLink do boleto pix: {licenseTLB}\n\nPix copia e cola:" )
+                    pix_key = (f"{licenseTCC}")
+                    messages.extend([message, pix_key])
+                else:
+                    message = (f"{base_message}\n\nSegue o boleto para realizar o pagamento:{licenseTLB}\n\nQualquer duvida estamos sempre a disposição.\n\nAtt.WVETRO")
+                    messages.append(message)
+
+                for msg in messages:
+
+                    send_message(driver=driver, number=licenseWpp,message=msg)
+                
+
+        print("************* Cobranças realizadas com sucesso ! *****************")
+        time.sleep(5)
+
+    except UnexpectedAlertPresentException as e:
+        alert = driver.switch_to.alert
+        alert.dismiss()
+        print(f"Exception UnexpectedAlertPresentException: {e}")
+    except Exception as e:
+        print(f"Exception: {e}")
+    finally:
         time.sleep(4)
 
-        if len(driver.find_elements(By.XPATH, '//*[@id="app"]/div/span[2]/div/span/div/div/div/div/div/div[1]')) < 1:
-            driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span').click()
-        time.sleep(4)
+    driver.quit()
 
-    if licencaTCC !="":
-        pix = urllib.parse.quote(f"{chave_pix}")
-        linkpix = f"https://web.whatsapp.com/send?phone=+55{licencaWpp}&text={pix}"
-        driver.get(linkpix)
         
-        while len(driver.find_elements(By.ID, 'side')) < 1:
-            time.sleep(2)
-        time.sleep(4)
+if __name__ == '__main__':
+    main()
 
-        if len(driver.find_elements(By.XPATH, '//*[@id="app"]/div/span[2]/div/span/div/div/div/div/div/div[1]')) < 1:
-            driver.find_element(By.XPATH, '//*[@id="main"]/footer/div[1]/div/span[2]/div/div[2]/div[2]/button/span').click()
-        time.sleep(4)
- 
