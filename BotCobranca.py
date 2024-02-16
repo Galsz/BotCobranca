@@ -2,7 +2,7 @@
 # --------------------------------------------------------------------------------------------------------
 # Created By   : Geovane A L Silva
 # Created Date : 2023/09/03
-# version = '1.5'  
+# version = '1.6'  
 # Last change date : 2024/02/16
 # --------------------------------------------------------------------------------------------------------
 
@@ -39,11 +39,13 @@ def initialize_driver():
     dir_path = os.getcwd()
     profile = os.path.join(dir_path, "profile", "wpp")
     options = webdriver.ChromeOptions()
-    
-    options.add_argument(r"--user-data-dir={}".format(profile))
-    
+
+    options.add_argument(r"user-data-dir={}".format(profile))
+   
     driver = webdriver.Chrome(service=service, options=options) 
     driver.minimize_window()
+    driver.set_page_load_timeout(30)
+    driver.implicitly_wait(30)
 
     return driver
 
@@ -65,12 +67,10 @@ def send_message(driver, number, message):
 
 def main():
     
-    driver = None
-    
     try:
-
-        data = get_data_license()
+        
         driver = initialize_driver()
+        data = get_data_license()
 
         for i in data:
 
