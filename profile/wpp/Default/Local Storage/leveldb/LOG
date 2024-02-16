@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-2024/02/15-12:21:15.009 3958 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\Local Storage\leveldb/MANIFEST-000001
-2024/02/15-12:21:15.018 3958 Recovering log #13
-2024/02/15-12:21:15.024 3958 Reusing old log C:\Projects\BotCobranca\profile\wpp\Default\Local Storage\leveldb/000013.log 
-=======
-2024/01/19-12:47:19.118 1a80 Reusing MANIFEST C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Local Storage\leveldb/MANIFEST-000001
-2024/01/19-12:47:19.124 1a80 Recovering log #4
-2024/01/19-12:47:19.133 1a80 Reusing old log C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Local Storage\leveldb/000004.log 
-2024/01/19-12:49:28.898 3158 Level-0 table #8: started
-2024/01/19-12:49:28.908 3158 Level-0 table #8: 14398 bytes OK
-2024/01/19-12:49:28.914 3158 Delete type=0 #4
->>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864
+2024/02/16-08:45:21.569 44ac Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\Local Storage\leveldb/MANIFEST-000001
+2024/02/16-08:45:21.572 44ac Recovering log #3
+2024/02/16-08:45:21.581 44ac Reusing old log C:\Projects\BotCobranca\profile\wpp\Default\Local Storage\leveldb/000003.log 

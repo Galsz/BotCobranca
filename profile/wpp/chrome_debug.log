@@ -1,28 +1,15 @@
-<<<<<<< HEAD
-[16768:16640:0215/122114.634:WARNING:chrome_main_delegate.cc(668)] This is Chrome version 121.0.6167.161 (not a warning)
-[16768:16640:0215/122114.735:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
-[16768:16640:0215/122114.735:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
-[16768:16640:0215/122115.998:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[16768:16640:0215/122132.285:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[16768:16640:0215/122147.927:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[16768:16640:0215/122158.766:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
-=======
-[8276:4084:0119/124718.708:WARNING:chrome_main_delegate.cc(667)] This is Chrome version 120.0.6099.225 (not a warning)
-[8276:4084:0119/124718.805:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
-[8276:4084:0119/124718.806:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
-[8276:4084:0119/124728.895:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[8276:4084:0119/124757.679:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[8276:4084:0119/124813.136:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[8276:4084:0119/124823.256:WARNING:CONSOLE(1)] "Fallback triggered https://web.whatsapp.com/WAWebWorker.99522cc1d60cd906d120.worker.js.map [object Object]", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
-[8276:4084:0119/124830.783:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[8276:4084:0119/124832.355:WARNING:CONSOLE(1)] "Fallback triggered https://web.whatsapp.com/WAWebWorker.99522cc1d60cd906d120.worker.js.map [object Object]", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
-[8276:4084:0119/124838.312:ERROR:CONSOLE(1)] "Request Emulation.setEmitTouchEventsForMouse failed. {"code":-32601,"message":"'Emulation.setEmitTouchEventsForMouse' wasn't found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
-[8276:4084:0119/124839.456:ERROR:CONSOLE(1)] "Request Emulation.setEmitTouchEventsForMouse failed. {"code":-32601,"message":"'Emulation.setEmitTouchEventsForMouse' wasn't found"}", source: devtools://devtools/bundled/devtools-frontend/front_end/core/protocol_client/protocol_client.js (1)
-[8276:4084:0119/124848.229:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[8276:4084:0119/124849.889:WARNING:CONSOLE(1)] "Fallback triggered https://web.whatsapp.com/WAWebWorker.99522cc1d60cd906d120.worker.js.map [object Object]", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
-[8276:4084:0119/124909.510:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[8276:4084:0119/124911.272:WARNING:CONSOLE(1)] "Fallback triggered https://web.whatsapp.com/WAWebWorker.99522cc1d60cd906d120.worker.js.map [object Object]", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
-[8276:4084:0119/124929.228:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
-[8276:4084:0119/124930.814:WARNING:CONSOLE(1)] "Fallback triggered https://web.whatsapp.com/WAWebWorker.99522cc1d60cd906d120.worker.js.map [object Object]", source: devtools://devtools/bundled/devtools-frontend/front_end/core/sdk/sdk.js (1)
-[8276:4084:0119/124933.886:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.
->>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864
+[19032:3892:0216/084521.206:WARNING:chrome_main_delegate.cc(668)] This is Chrome version 121.0.6167.185 (not a warning)
+[19032:3892:0216/084521.301:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(168) Starting CBCM Controller Initialization
+[19032:3892:0216/084521.302:INFO:policy_logger.cc(144)] :components\enterprise\browser\controller\chrome_browser_cloud_management_controller.cc(196) No machine level policy manager exists.
+[19032:3892:0216/084523.216:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[19032:3892:0216/084524.549:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
+[19032:3892:0216/084524.550:INFO:CONSOLE(215)] "Another connection wants to delete database 'wawc'. Closing db now to resume the delete request.", source: https://web.whatsapp.com/serviceworker.js (215)
+[19032:3892:0216/084535.466:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 0, file size:5137
+[19032:3892:0216/084535.571:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 0, file size:265059
+[19032:3892:0216/084536.117:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 0, file size:45154
+[19032:3892:0216/084536.528:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 0, file size:2222106
+[19032:3892:0216/084537.306:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 0, file size:2747170
+[19032:3892:0216/084537.710:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 0, file size:3844
+[19032:3892:0216/084538.510:WARNING:controller_impl.cc(1190)] Background download complete, client: 6, completion type: 0, file size:1463571
+[19032:3892:0216/084626.990:INFO:CONSOLE(0)] "Error with Permissions-Policy header: Unrecognized feature: 'ambient-light-sensor'.", source:  (0)
+[19032:3892:0216/084642.968:WARNING:pref_notifier_impl.cc(41)] Pref observer for media_router.cast_allow_all_ips found at shutdown.

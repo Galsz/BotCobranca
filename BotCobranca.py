@@ -1,7 +1,9 @@
+# -*- coding: utf-8 -*-
 # --------------------------------------------------------------------------------------------------------
 # Created By   : Geovane A L Silva
 # Created Date : 2023/09/03
-# version = 1.4 - 2024/02/15
+# version = '1.5'  
+# Last change date : 2024/02/16
 # --------------------------------------------------------------------------------------------------------
 
 import json
@@ -37,9 +39,9 @@ def initialize_driver():
     dir_path = os.getcwd()
     profile = os.path.join(dir_path, "profile", "wpp")
     options = webdriver.ChromeOptions()
- 
-    options.add_argument(r"user-data-dir={}".format(profile))
-
+    
+    options.add_argument(r"--user-data-dir={}".format(profile))
+    
     driver = webdriver.Chrome(service=service, options=options) 
     driver.minimize_window()
 
@@ -62,6 +64,9 @@ def send_message(driver, number, message):
 
 
 def main():
+    
+    driver = None
+    
     try:
 
         data = get_data_license()
@@ -122,11 +127,10 @@ def main():
     except Exception as e:
         print(f"Exception: {e}")
     finally:
+        if driver:
+            driver.quit()
         time.sleep(4)
 
-    driver.quit()
-
-        
 if __name__ == '__main__':
     main()
 

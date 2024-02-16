@@ -1,19 +1,2 @@
-<<<<<<< HEAD
-2024/02/15-12:20:32.880 2a20 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\Local Storage\leveldb/MANIFEST-000001
-2024/02/15-12:20:32.892 2a20 Recovering log #10
-2024/02/15-12:20:32.893 2a20 Level-0 table #12: started
-2024/02/15-12:20:32.904 2a20 Level-0 table #12: 13828 bytes OK
-2024/02/15-12:20:32.915 2a20 Delete type=0 #10
-2024/02/15-12:20:32.916 2100 Compacting 4@0 + 0@1 files
-2024/02/15-12:20:32.928 2100 Generated table #14@0: 89 keys, 12152 bytes
-2024/02/15-12:20:32.928 2100 Compacted 4@0 + 0@1 files => 12152 bytes
-2024/02/15-12:20:32.929 2100 compacted to: files[ 0 1 0 0 0 0 0 ]
-2024/02/15-12:20:32.931 2100 Delete type=2 #3
-2024/02/15-12:20:32.932 2100 Delete type=2 #7
-2024/02/15-12:20:32.932 2100 Delete type=2 #9
-2024/02/15-12:20:32.934 2100 Delete type=2 #12
-=======
-2024/01/19-11:51:41.677 27ac Reusing MANIFEST C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Local Storage\leveldb/MANIFEST-000001
-2024/01/19-11:51:41.685 27ac Recovering log #4
-2024/01/19-11:51:41.691 27ac Reusing old log C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\Local Storage\leveldb/000004.log 
->>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864
+2024/02/16-08:44:02.617 31fc Creating DB C:\Projects\BotCobranca\profile\wpp\Default\Local Storage\leveldb since it was missing.
+2024/02/16-08:44:02.695 31fc Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\Local Storage\leveldb/MANIFEST-000001

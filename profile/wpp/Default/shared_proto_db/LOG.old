@@ -1,9 +1,2 @@
-<<<<<<< HEAD
-2024/02/15-12:20:32.879 4500 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\shared_proto_db/MANIFEST-000001
-2024/02/15-12:20:32.880 4500 Recovering log #3
-2024/02/15-12:20:32.881 4500 Reusing old log C:\Projects\BotCobranca\profile\wpp\Default\shared_proto_db/000003.log 
-=======
-2024/01/19-11:51:41.563 2358 Reusing MANIFEST C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\shared_proto_db/MANIFEST-000001
-2024/01/19-11:51:41.564 2358 Recovering log #3
-2024/01/19-11:51:41.566 2358 Reusing old log C:\Users\Osmir\Documents\BotCobranca\profile\wpp\Default\shared_proto_db/000003.log 
->>>>>>> 2da96eff96bd7d0decb10cfaae0e7fd92217e864
+2024/02/16-08:44:02.619 40e0 Creating DB C:\Projects\BotCobranca\profile\wpp\Default\shared_proto_db since it was missing.
+2024/02/16-08:44:02.658 40e0 Reusing MANIFEST C:\Projects\BotCobranca\profile\wpp\Default\shared_proto_db/MANIFEST-000001
